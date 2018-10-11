@@ -7,7 +7,6 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
-  pluginlib
   topic_tools
   ros_type_introspection
 )
