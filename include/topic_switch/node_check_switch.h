@@ -5,10 +5,6 @@
 #include <ros/ros.h>
 #include <topic_tools/shape_shifter.h>
 
-//headers in STL
-#include <unordered_map>
-//#include <memory>
-
 class node_check_switch
 {
 public:
@@ -17,7 +13,8 @@ public:
 private:
     ros::NodeHandle nh_;
     ros::Subscriber* sub_ptr_;
-    std::unordered_map<std::string,ros::Publisher> pubs_;
+    ros::Publisher exist_pub_;
+    ros::Publisher not_exist_pub_;
     std::string topic_exist_;
     std::string topic_not_exist_;
     std::string check_target_node_name_;
@@ -25,6 +22,7 @@ private:
     void connection_callback_(const ros::SingleSubscriberPublisher&);
     void subscribe_();
     void unsubscribe_();
+    bool target_node_exists_();
     volatile bool advertised_;
 };
 

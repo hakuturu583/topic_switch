@@ -26,3 +26,15 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
 )
+
+set(CPP_EXEC_NAMES node_check_switch)
+foreach(cpp_exec_names ${CPP_EXEC_NAMES})
+  install(TARGETS ${cpp_exec_names}
+    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+    )
+endforeach(cpp_exec_names)
+
+foreach(dir config launch)
+  install(DIRECTORY ${dir}/
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
+endforeach(dir)

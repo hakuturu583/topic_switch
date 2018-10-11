@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="topic_switch" type="node_check_switch" name="node_check_switch">
+        <remap from="/node_check_switch/input" to="/input"/>
+        <rosparam file="$(find topic_switch)/config/sample_node_check_switch.yaml" command="load" ns="" />
+    </node>
+
+    <node name="input_node" pkg="rostopic" type="rostopic" args="pub -r 100 /input std_msgs/Float64 -- 1" output="screen" respawn="true">
+    </node>
+
+    <node name="target_node" pkg="rostopic" type="rostopic" args="pub -r 100 /target std_msgs/Float64 -- 1" output="screen" respawn="false">
+    </node>
+</launch>
