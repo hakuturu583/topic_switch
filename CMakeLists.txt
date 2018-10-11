@@ -7,6 +7,9 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  pluginlib
+  topic_tools
+  ros_type_introspection
 )
 
 catkin_package(
@@ -15,6 +18,9 @@ catkin_package(
   CATKIN_DEPENDS roscpp rospy
 #  DEPENDS system_lib
 )
+
+add_executable(node_check_switch src/node_check_switch_node.cpp src/node_check_switch.cpp)
+target_link_libraries(node_check_switch ${catkin_LIBRARIES})
 
 include_directories(
   include
