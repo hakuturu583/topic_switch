@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>topic_switch</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description>The topic_switch package</description>
 
   <maintainer email="masaya@todo.todo">Masaya Kataoka</maintainer>

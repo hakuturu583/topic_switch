@@ -2,8 +2,8 @@
 Changelog for package topic_switch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2018-10-11)
+------------------
 * fix depends
 * update README.md
 * add README.md
