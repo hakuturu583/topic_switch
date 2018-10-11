@@ -1,6 +1,10 @@
 # Topic Switch 
 topic switch nodes for ROS.
 
+| *master* |
+|----------|
+|[![Build Status](https://travis-ci.org/hakuturu583/topic_switch.svg?branch=master)](https://travis-ci.org/hakuturu583/topic_switch)
+
 ## node_check_switch 
 ### params
 1. ~/check_target_node_name  
